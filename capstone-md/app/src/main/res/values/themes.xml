@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CapstoneProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="android:fontFamily">@font/relay_plus_jakarta_sans_medium</item>
+    </style>
+
+    <style name="Theme.CapstoneProject" parent="Base.Theme.CapstoneProject" />
+</resources>

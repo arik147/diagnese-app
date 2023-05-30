@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/form_register_first_card"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="20dp"
+    android:layout_height="480dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/first_register_first_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/enter_your_name"
+            android:textSize="18sp"
+            android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/first_register_first_textField"
+            app:layout_constraintTop_toBottomOf="@id/first_register_first_label"
+            android:layout_margin="10dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_name"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/second_register_first_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_register_first_textField"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/enter_your_age"
+            android:textSize="18sp"
+            android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ageTextField"
+            app:layout_constraintTop_toBottomOf="@id/second_register_first_label"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="10dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/age"
+                android:inputType="text|number"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/ageTextField"
+            app:layout_constraintStart_toEndOf="@id/ageTextField"
+            android:text="@string/years_old"
+            android:layout_margin="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+            app:layout_constraintTop_toBottomOf="@id/second_register_first_label" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/third_register_first_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ageTextField"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/gender"
+            android:textSize="18sp"
+            android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+            />
+        
+        <RadioGroup
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/third_register_first_label"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/genderRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <RadioButton
+                android:id="@+id/radio_selection_male"
+                android:layout_width="wrap_content"
+                android:text="@string/male"
+                android:textSize="24sp"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/radio_selection_female"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:text="@string/female"
+                android:textSize="24sp"
+                android:layout_height="wrap_content"/>
+            
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genderRadio"
+            android:text="@string/next"
+            android:textSize="18sp"
+            android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
