@@ -1,4 +1,4 @@
-# diagnese-app
+# Diagnese App
 C23-PS279<br>
 
 Bangkit Capstone Project<br>
