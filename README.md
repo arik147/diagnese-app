@@ -2,7 +2,7 @@
 
 ## Welcome to Our Bangkit Capstone Project documentation repository!
 
-### Member :
+### Members :
 ### 1. Machine Learning
   - M146DKY4220 - Icha Dwi Aprilia Herani
   - M146DKX4133 - M. Jumli Gazali
