@@ -61,4 +61,5 @@ Welcome to our Diagnese API
     gcloud run deploy --image gcr.io/PROJECT_ID/diagnese-api-flask
     ```
     
-# We are using Github Action CI/CD Cloud run in developing the diagnese backend app
+# Github Action CI/CD Cloud Run for developing the Diagnese API
+We are using github action to setup, build and deploy the Cloud Run service in our project on Google Cloud Platform. New revision will created after push the changes on main branch of the development repository https://github.com/arik147/diagnese-api-flask. 
