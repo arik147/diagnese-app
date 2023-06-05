@@ -6,6 +6,7 @@ Welcome to our Diagnese API
 2. Programming Language: Python
 3. Web Server: Flask API (Restx)
 4. Serverless: Cloud Run
+5. Github (Repository & Github Action CI/CD)
 
 # How to setup Locally
 1. Clone repository following this command
@@ -59,3 +60,5 @@ Welcome to our Diagnese API
     ```
     gcloud run deploy --image gcr.io/PROJECT_ID/diagnese-api-flask
     ```
+    
+# We are using Github Action CI/CD Cloud run in developing the diagnese backend app
