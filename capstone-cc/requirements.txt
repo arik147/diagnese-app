@@ -1,0 +1,5 @@
+flask
+flask_restx
+tensorflow
+numpy
+gunicorn==20.1.0
