@@ -1,4 +1,4 @@
-# Diagnese Modelling
+# Diagnese `h5` Model
 
 ## Summary
 **Diagnese model** is used to classify disease types based on 131 types of symptoms and then the user inputs what symptoms the user feels. Using this model, this model can predict about 41 types of diseases in the dataset.
