@@ -111,7 +111,7 @@ Contains the required library version, along with the library and version:
 
 ## Tool used for building `Diagnese Model`
 1. [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true)
-2. [Jupyter Notebook]()
+2. Jupyter Notebook
 3. [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1b2fc-CGsCwpvIpAYlB_7KxWd4xDG-bJA9jMCkKLZ2cM/edit?hl=id#gid=0)
 
 ## Source of Dataset
