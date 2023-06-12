@@ -15,7 +15,7 @@ In this repository consist of 2 folders:
 - `model.h5` that saving the best model into `.hdf5` for re-training or just load to make some prediction with the model.
 
 In this repository consist of 3 files:
-1. `diagnese_model.ipynb` that process to building model for our **Diagnes** app.
+1. `diagnese_model.ipynb` that process to building model for our **Diagnese** app.
 2. `diagnese_model_testing.ipynb` that process to testing our `hdf5` model to test how well the model predicts the data.
 3. `requirements.txt` that consist library version required for this modelling.
 
