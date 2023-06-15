@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -23,11 +22,11 @@ import com.diagnese.app.utils.Constants
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CenterAppBar(
-    context : Context,
-    title : String,
-    navIcons : ImageVector = Icons.Default.ArrowBack,
-    onNavClick : () -> Unit = { context.startActivity(Intent(context, MainActivity::class.java))},
-    actions : @Composable RowScope.() -> Unit = {}
+    context: Context,
+    title: String,
+    navIcons: ImageVector = Icons.Default.ArrowBack,
+    onNavClick: () -> Unit = { context.startActivity(Intent(context, MainActivity::class.java))},
+    actions: @Composable RowScope.() -> Unit = {}
 ){
 
     CenterAlignedTopAppBar(

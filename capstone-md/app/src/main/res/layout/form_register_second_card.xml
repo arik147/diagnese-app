@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/enter_your_username"
+            android:text="@string/enter_your_email"
             android:textSize="18sp"
             android:fontFamily="@font/relay_plus_jakarta_sans_bold"
             />
@@ -39,8 +39,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/enter_your_username"
-                android:inputType="text"
+                android:id="@+id/first_register_second_editText"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -75,6 +76,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/second_registers_second_editText"
                 android:hint="@string/enter_your_password"
                 android:inputType="textPassword"
                 />
@@ -89,7 +91,7 @@
             app:layout_constraintTop_toBottomOf="@id/second_register_textField"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:hint="@string/confirm_password"
+            android:text="@string/confirm_password"
             android:textSize="18sp"
             android:fontFamily="@font/relay_plus_jakarta_sans_bold"
             />
@@ -110,6 +112,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/third_register_second_editText"
                 android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 />

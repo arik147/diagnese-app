@@ -1,16 +1,12 @@
 package com.diagnese.app.model
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowForwardIos
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.google.android.material.switchmaterial.SwitchMaterial
 
 data class SettingsMenuItem(
+    val leadingIcon : ImageVector,
     val title : String,
-    val isExpandable : Boolean = false,
-    val icon : ImageVector,
-    val childList : ArrayList<ChildItem>
+    val trailingIcon : Any? = Icons.Default.ArrowForwardIos
 )
 
-data class ChildItem(
-    val childTitle : String,
-    val switchLabel : String? = null
-)

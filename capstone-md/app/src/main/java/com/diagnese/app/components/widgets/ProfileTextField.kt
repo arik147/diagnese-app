@@ -21,7 +21,8 @@ import com.google.android.material.textfield.TextInputEditText
 fun ProfileTextField(
     text : String,
     hintText : String,
-    inputType: Int
+    inputType: Int,
+    value : String
 ){
     Box(modifier = Modifier
         .fillMaxWidth()
@@ -31,7 +32,7 @@ fun ProfileTextField(
             Text(text = text,
                 fontSize = Constants.LARGE_FONT_SIZE.sp,
                 fontFamily = Constants.FONT_FAMILY_BOLD,
-                color = Color.Gray
+                color = Color.Black
             )
             Spacer(modifier = Modifier.height(10.dp))
             AndroidView(
@@ -39,6 +40,7 @@ fun ProfileTextField(
                 factory = { context ->
                     TextInputEditText(context).apply {
                         hint = hintText
+                        setText(value)
                         setInputType(inputType)
                      }
                 })

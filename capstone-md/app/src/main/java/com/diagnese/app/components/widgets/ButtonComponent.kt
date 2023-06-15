@@ -20,7 +20,7 @@ fun ButtonComponent(
 ){
     Button(onClick = onClick,
         colors = ButtonDefaults.buttonColors(colorResource(id = Constants.PRIMARY_COLOR)),
-        shape = Constants.BUTTON_CORNER_RADIUS,
+        shape = Constants.ROUNDED_RADIUS,
 
         modifier = modifier
             .width(200.dp)

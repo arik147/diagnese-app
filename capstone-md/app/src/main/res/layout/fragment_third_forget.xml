@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_400"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pages.auth.forgetpassword.ThirdForgetFragment">
+
+    <TextView
+        android:id="@+id/third_forget_title"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+        android:textColor="@color/blue_700"
+        />
+
+    <TextView
+        android:id="@+id/third_forget_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/third_forget_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:textColor="@color/blue_700"
+        android:text="@string/let_s_create_your_account"
+        />
+
+    <include
+        android:id="@+id/form_third_forget"
+        app:layout_constraintTop_toBottomOf="@id/third_forget_subtitle"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="380dp"
+        android:layout_height="480dp"
+        layout="@layout/form_third_forgot_password"
+        />
+
+
+
+    <TextView
+        android:id="@+id/login_text_btn"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_third_forget"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/relay_plus_jakarta_sans_bold"
+        android:textColor="@color/blue_700"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        android:text="@string/back_to_sign_in"
+        android:layout_height="wrap_content"
+        android:focusable="true" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

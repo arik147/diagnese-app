@@ -19,7 +19,7 @@
          app:layout_constraintTop_toTopOf="parent"
          android:layout_marginStart="20dp"
          android:layout_marginTop="10dp"
-         android:text="@string/enter_your_username"
+         android:text="@string/enter_your_email"
          android:textSize="18sp"
          android:fontFamily="@font/relay_plus_jakarta_sans_bold"
          />
@@ -36,10 +36,11 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_login_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/enter_your_username"
-                android:inputType="text"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -72,6 +73,7 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/second_login_editText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_your_password"
@@ -86,7 +88,7 @@
             app:layout_constraintTop_toBottomOf="@id/second_login_textField"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="20dp"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textColor="@color/blue_500"
             android:fontFamily="@font/relay_plus_jakarta_sans_bold"
             android:text="@string/forgot_password"
@@ -114,7 +116,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/or_continue_with"
+            android:id="@+id/or_continue_with"
             android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:background="@drawable/account_google"
+            android:id="@+id/google_button"
+            android:layout_height="50dp"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@+id/or_continue_with"
+            app:layout_constraintEnd_toEndOf="@+id/facebook_button"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@string/google"
+            android:focusable="true" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:id="@+id/facebook_button"
+            android:background="@drawable/account_facebook"
+            android:contentDescription="@string/google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/google_button"
+            app:layout_constraintTop_toBottomOf="@+id/or_continue_with"
+            android:focusable="true" />
 
 
 

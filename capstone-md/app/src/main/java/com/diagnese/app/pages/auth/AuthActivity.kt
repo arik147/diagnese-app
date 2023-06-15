@@ -3,7 +3,9 @@ package com.diagnese.app.pages.auth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.diagnese.app.databinding.ActivityAuthBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AuthActivity : AppCompatActivity() {
 
     private var _binding : ActivityAuthBinding? = null

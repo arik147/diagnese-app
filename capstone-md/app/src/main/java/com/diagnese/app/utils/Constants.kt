@@ -13,6 +13,7 @@ object Constants {
     const val SMALL_FONT_SIZE = 14
     const val MEDIUM_FONT_SIZE = 16
     const val XL_FONT_SIZE = 22
+    const val XXL_FONT_SIZE = 30
     const val LARGE_FONT_SIZE = 18
     val TEXT_COLOR = R.color.blue_700
     val CARD_CORNER_RADIUS = RoundedCornerShape(20)

@@ -1,7 +1,10 @@
 package com.diagnese.app.components.widgets
 
 
+import android.content.Intent
+import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,10 +14,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import com.diagnese.app.utils.Constants
 import com.diagnese.app.R
 import com.diagnese.app.model.Data
+import com.diagnese.app.pages.glosary.GlosaryActivity
 
 @Composable
 fun GuideCard(
@@ -30,9 +36,10 @@ fun GuideCard(
     image : Int,
     title : String,
     slug : String,
-    buttonMenu : String
+    buttonMenu : String,
+    onButtonClick : () -> Unit = {},
+    onCardClick : () -> Unit = {}
 ){
-    val context = LocalContext.current
 
     Card(
         modifier = modifier
@@ -44,9 +51,11 @@ fun GuideCard(
             },
                 isFalse = {
                     height(120.dp)
+                    clickable {  onCardClick() }
                 }
             ),
         shape = Constants.CARD_CORNER_RADIUS,
+        colors = CardDefaults.cardColors(Color.White)
     ){
         Row(
             modifier = Modifier.padding(15.dp),
@@ -57,8 +66,8 @@ fun GuideCard(
                     .conditional(
                         buttonMenu.isNotEmpty(),
                         isTrue = {
-                            height(168.dp)
-                            width(168.dp)
+                            height(160.dp)
+                            width(160.dp)
                         },
                         isFalse = {
                             height(120.dp)
@@ -87,7 +96,7 @@ fun GuideCard(
                 Spacer(modifier = Modifier.height(10.dp))
 
                 if(buttonMenu.isNotEmpty()){
-                    ButtonComponent(buttonMenu = buttonMenu, onClick = {})
+                    ButtonComponent(buttonMenu = buttonMenu, onClick = onButtonClick)
                 }
             }
         }
@@ -111,12 +120,20 @@ internal fun Modifier.conditional(
 @Composable
 fun GuideCardView(){
 
+    val context = LocalContext.current
+
    Column {
        Data.guideItemList.forEach{ item ->
            GuideCard(image = item.image,
                title = item.title,
                slug = item.slug,
-               buttonMenu = item.buttonMenu
+               buttonMenu = item.buttonMenu,
+               onButtonClick = {
+                  Toast.makeText(context, "Coming Soon! Stay Tuned", Toast.LENGTH_SHORT).show()
+               },
+               onCardClick = {
+                   context.startActivity(Intent(context, GlosaryActivity::class.java))
+               }
            )
        }
    }

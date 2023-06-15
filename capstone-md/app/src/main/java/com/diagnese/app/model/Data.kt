@@ -1,15 +1,17 @@
 package com.diagnese.app.model
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Help
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.People
+import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.SupportAgent
-import androidx.compose.material.icons.outlined.RemoveRedEye
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.material3.SwitchDefaults
+
 import com.diagnese.app.R
-import com.google.android.material.switchmaterial.SwitchMaterial
+
 
 object Data {
 
@@ -30,47 +32,38 @@ object Data {
 
     )
 
-    val settingsMenuItem = arrayListOf(
+    val settingsMenuItem = listOf(
         SettingsMenuItem(
-            title = "Account",
-            icon = Icons.Default.People,
-            isExpandable = true,
-            childList = arrayListOf(
-                ChildItem(
-                    childTitle = "Edit Profile"
-                ),
-                ChildItem(
-                    childTitle = "Change Password"
-                ),
-                ChildItem(
-                    childTitle = "Delete This Account"
-                )
-            )
+            leadingIcon = Icons.Default.Edit,
+            title = "Edit Profile",
         ),
 
         SettingsMenuItem(
-            title = "Notification",
-            icon = Icons.Default.Notifications,
-            isExpandable = true,
-            childList = arrayListOf(
-                ChildItem(
-                    childTitle = "Notification",
-                    switchLabel = "switch"
-                )
-            )
+            leadingIcon = Icons.Default.Lock,
+            title = "Change Password",
         ),
-
 
         SettingsMenuItem(
-            title = "Appearance",
-            icon = Icons.Default.Notifications,
-            isExpandable = true,
-            childList = arrayListOf(
-                ChildItem(
-                    childTitle = "Dark Mode",
-                    switchLabel = "switch"
-                )
-            )
+            leadingIcon = Icons.Default.Notifications,
+            title = "Turn On Notifications",
+            trailingIcon = SwitchDefaults
         ),
-        )
+
+        SettingsMenuItem(
+            leadingIcon = Icons.Default.Shield,
+            title = "Privacy and Security",
+        ),
+
+        SettingsMenuItem(
+            leadingIcon = Icons.Default.SupportAgent,
+            title = "Help Center",
+
+        ),
+
+        SettingsMenuItem(
+            leadingIcon = Icons.Default.Help,
+            title = "About",
+        ),
+
+    )
 }
