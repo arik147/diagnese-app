@@ -63,6 +63,8 @@ class LoginFragment : Fragment() {
             validate(email, password)
             loginViewModel.login(email, password)
             startActivity(Intent(requireActivity(), MainActivity::class.java))
+            requireActivity().finish()
+
         }
 
         binding.formLoginCard.forgotPasswordButton.setOnClickListener{
@@ -78,6 +80,8 @@ class LoginFragment : Fragment() {
 
             val googleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
             googleSignInLauncher.launch(googleSignInClient.signInIntent)
+            startActivity(Intent(requireActivity(), MainActivity::class.java))
+            requireActivity().finish()
         }
 
 

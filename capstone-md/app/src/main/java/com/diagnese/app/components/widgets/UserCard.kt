@@ -42,7 +42,7 @@ fun UserCard(
     Card( modifier = modifier
         .padding(15.dp)
         .fillMaxWidth()
-        .height(85.dp),
+        .height(95.dp),
         colors = CardDefaults.cardColors(Color.White),
         shape = RoundedCornerShape(30.dp)) {
         Row(
@@ -63,7 +63,7 @@ fun UserCard(
             Column{
                 Text(
                     text = name,
-                    fontSize = Constants.LARGE_FONT_SIZE.sp,
+                    fontSize = Constants.MEDIUM_FONT_SIZE.sp,
                     fontFamily = Constants.FONT_FAMILY_BOLD,
                     color = colorResource(id = Constants.TEXT_COLOR)
                 )

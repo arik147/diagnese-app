@@ -134,7 +134,7 @@ fun ProfilePage(
                          text = "E-mail Address",
                          hintText = "Your E-mail Address" ,
                          inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS,
-                         value = currentUser.value?.child("email")?.value as String
+                         value = (currentUser.value?.child("email")?.value as String?) ?: "rinerina@example.com"
                      )
                  }
 
@@ -143,7 +143,7 @@ fun ProfilePage(
                          text = "Your Name",
                          hintText = "Your Name" ,
                          inputType = InputType.TYPE_CLASS_TEXT,
-                         value = currentUser.value?.child("name")?.value as String
+                         value = (currentUser.value?.child("name")?.value as String?) ?: "Rin Erina"
                      )
                  }
              }
@@ -167,6 +167,8 @@ fun ProfilePage(
                               RadioButton(context).apply {
                                   width
                                   text = "Male"
+                                  setTextColor(resources.getColor(R.color.black ))
+
                               }
                           })
 
@@ -174,6 +176,7 @@ fun ProfilePage(
                               RadioButton(context).apply {
                                   width
                                   text = "Female"
+                                  setTextColor(resources.getColor(R.color.black ))
                               }
                           })
                       }

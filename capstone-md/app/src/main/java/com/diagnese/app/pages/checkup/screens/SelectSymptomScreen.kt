@@ -1,6 +1,7 @@
 package com.diagnese.app.pages.checkup.screens
 
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -69,6 +70,7 @@ fun SelectSymptomScreen(
 
 
    var isExpanded by remember { mutableStateOf(false ) }
+    val context = LocalContext.current
 
     val symptoms = symptomsState.value?.data?.asMap()
 
@@ -216,7 +218,11 @@ fun SelectSymptomScreen(
                         .fillMaxWidth()
                         .padding(15.dp)
                     ) {
-                        navigateToCheckOnce(symptomsValue,feels)
+                        if(symptomsValue.isNotEmpty()){
+                            navigateToCheckOnce(symptomsValue,feels)
+                        } else {
+                            Toast.makeText(context, "Select First", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
 

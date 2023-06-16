@@ -47,10 +47,10 @@ fun GuideCard(
             .fillMaxWidth()
             .conditional(buttonMenu.isNotEmpty(),
             isTrue = {
-                  height(180.dp)
+                  height(190.dp)
             },
                 isFalse = {
-                    height(120.dp)
+                    height(130.dp)
                     clickable {  onCardClick() }
                 }
             ),
@@ -81,14 +81,14 @@ fun GuideCard(
             Column(verticalArrangement = Arrangement.Center) {
                 Text(
                     text = title,
-                    fontSize = Constants.XL_FONT_SIZE.sp,
+                    fontSize = Constants.MEDIUM_FONT_SIZE.sp,
                     fontFamily = Constants.FONT_FAMILY_MEDIUM,
 
                     )
 
                 Text(
                     text = slug,
-                    fontSize = Constants.MEDIUM_FONT_SIZE.sp,
+                    fontSize = Constants.SMALL_FONT_SIZE.sp,
                     fontFamily = Constants.FONT_FAMILY_MEDIUM,
 
                     )

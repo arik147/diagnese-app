@@ -46,7 +46,7 @@ fun NewsCard(
     Card(modifier = modifier
         .padding(10.dp)
         .width(370.dp)
-        .height(250.dp)
+        .height(280.dp)
         .clickable { onClick() },
         border = BorderStroke(1.dp, Color.Gray),
         colors = CardDefaults.cardColors(Color.White)

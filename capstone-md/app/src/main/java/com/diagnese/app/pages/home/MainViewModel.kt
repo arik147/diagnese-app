@@ -27,13 +27,15 @@ class MainViewModel @Inject constructor(private val newsUseCase: NewsUseCase, pr
     private val _newsPagingData = MutableLiveData<Resource<NewsResponse>>()
     val newsPagingData : LiveData<Resource<NewsResponse>> = _newsPagingData
 
-    private val _loginResultState = MutableLiveData<DataSnapshot?>()
-    val loginResultState : LiveData<DataSnapshot?> = _loginResultState
+    private val _loginResultState = MutableLiveData<DataSnapshot>()
+    val loginResultState : LiveData<DataSnapshot> = _loginResultState
 
 
-    private fun getUser() = viewModelScope.launch {
-        val user = firebaseUseCase.getUser()
-        _loginResultState.value = user
+    private fun getUser(){
+        viewModelScope.launch {
+            val user = firebaseUseCase.getUser()
+            _loginResultState.value = user
+        }
     }
 
    private fun getAllNews(key : String) = viewModelScope.launch {

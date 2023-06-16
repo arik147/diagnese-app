@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.diagnese.app.R
 import com.diagnese.app.utils.Constants
 import com.google.android.material.textfield.TextInputEditText
 
@@ -42,6 +43,7 @@ fun ProfileTextField(
                         hint = hintText
                         setText(value)
                         setInputType(inputType)
+                        setTextColor(R.color.black)
                      }
                 })
         }

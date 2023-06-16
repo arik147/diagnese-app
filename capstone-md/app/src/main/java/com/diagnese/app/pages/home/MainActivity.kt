@@ -168,11 +168,13 @@ fun MainPage(
                  item{
                     if(currentUser.value == null){
                         GuestCard()
-                    } else {
+                    } else if(currentUser.value != null) {
                         UserCard(
-                            name = currentUser.value?.child("name")?.value as String,
-                            age = (currentUser.value?.child("age")?.value as Long).toString()
+                            name = (currentUser.value?.child("name")?.value as String?) ?: "Rin Erina" ,
+                            age = ((currentUser.value?.child("age")?.value as Long?) ?: 23.toLong()).toString()
                         )
+                    } else {
+                        GuestCard()
                     }
                  }
 
@@ -210,9 +212,9 @@ fun MainPage(
                                 Loading()
                             }
                         } else {
-                            items(items = newsData, key = { item -> item.title!! }){
+                            items(items = newsData, key = { item -> item.title ?: "" }){
                                 NewsCard(
-                                    imageUrl = it.urlToImage as String,
+                                    imageUrl = (it.urlToImage ?: "" )as String ,
                                     title = it.title ?: "",
                                     onClick = {
                                         val intent = Intent(context, NewsDetailActivity::class.java)
@@ -221,9 +223,9 @@ fun MainPage(
                                     },
                                     onBookmarked = {
                                         val newsEntity = NewsEntity(
-                                            image = it.urlToImage,
-                                            title = it.title!!,
-                                            author = it.author!!,
+                                            image = (it.urlToImage ?: "") as String ,
+                                            title = it.title ?: "",
+                                            author = it.author ?: "",
                                         )
                                         viewModel.insertBookmark(newsEntity)
                                     }

@@ -58,7 +58,7 @@ class FirebaseRepository @Inject constructor(
 
     override suspend fun getUser(): DataSnapshot {
         return try {
-            val users = firebaseDatabase.getReference("Users").child(firebaseAuth.uid!!).get().await()
+            val users = firebaseDatabase.getReference("Users").child(firebaseAuth.uid ?: "").get().await()
             users
         }catch (e : Exception){
             e.printStackTrace()
